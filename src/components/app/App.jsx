@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import CowTiles from "./CowTiles.jsx";
+import Form from "./Form.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,9 @@ class App extends React.Component {
           <CowTiles cows={this.state.cows} />
         </div>
 
-        <div className="forms">forms go here</div>
+        <div className="forms">
+          <Form />
+        </div>
       </div>
     );
   }
