@@ -5,7 +5,6 @@ const pool = new Pool({
 // use query's here
 
 const getAllCows = () => {
-  // let values = [cows];
   return pool.query("SELECT * FROM cow").then(res => res.rows);
 };
 
