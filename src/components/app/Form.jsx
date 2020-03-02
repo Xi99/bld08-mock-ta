@@ -16,7 +16,7 @@ class Form extends React.Component {
   };
   render() {
     return (
-      <div className="form-container">
+      <form className="form-container">
         <input
           name="name"
           onChange={this.handleInput}
@@ -29,8 +29,14 @@ class Form extends React.Component {
           type="text"
           placeholder="Cow Description..."
         />
-        <button>Add Cow</button>
-      </div>
+        <button
+          onClick={e =>
+            this.props.handleAddCow(e, this.state.name, this.state.description)
+          }
+        >
+          Add Cow
+        </button>
+      </form>
     );
   }
 }

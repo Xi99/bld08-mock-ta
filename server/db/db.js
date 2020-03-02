@@ -9,7 +9,7 @@ const getAllCows = () => {
 };
 
 const addCow = cow => {
-  let values = [cow.name, cow.description];
+  let values = [cow.cow_name, cow.cow_description];
   return pool
     .query("INSERT INTO cow (cow_name, cow_description) VALUES($1, $2)", values)
     .then(() => true);
